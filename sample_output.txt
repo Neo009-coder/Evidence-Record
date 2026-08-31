@@ -1,0 +1,239 @@
+============================================================
+          FORENSIC EVIDENCE AND CUSTODY VAULT
+             Class 12 Computer Science Project
+============================================================
+[OK] Connected to MySQL. Database is ready.
+
+==============================================
+ MAIN MENU
+==============================================
+  1. Add New Case
+  2. Add New Evidence
+  3. View All Cases
+  4. View All Evidence
+  5. Search Evidence
+  6. Transfer Custody of Evidence
+  7. View Custody Chain of an Evidence
+  8. Update Evidence (storage / status)
+  9. Case Wise Report (can save in text file)
+ 10. Delete a Record
+  0. Exit
+==============================================
+Enter your choice (0 to exit) : 3
+
+----- ALL CASES -----
+------------------------------------------------------------------------------
+CASE ID   TITLE                              OFFICER           FILED ON     STATUS
+------------------------------------------------------------------------------
+C101       Bank Locker Robbery                Inspector R. Sha   2026-07-12    Open
+C102       Missing Person Case                SI A. Verma        2026-08-02    Open
+C103       Hit and Run Accident               Inspector K. Sin   2026-08-20    Closed
+------------------------------------------------------------------------------
+Total cases : 3
+
+Press Enter to show the menu again...
+
+==============================================
+ MAIN MENU
+==============================================
+  1. Add New Case
+  2. Add New Evidence
+  3. View All Cases
+  4. View All Evidence
+  5. Search Evidence
+  6. Transfer Custody of Evidence
+  7. View Custody Chain of an Evidence
+  8. Update Evidence (storage / status)
+  9. Case Wise Report (can save in text file)
+ 10. Delete a Record
+  0. Exit
+==============================================
+Enter your choice (0 to exit) : 4
+
+----- ALL EVIDENCE (joined with case title) -----
+--------------------------------------------------------------------------------------------
+EV ID     CASE     CASE TITLE                    TYPE          STORAGE           HOLDER            STATUS
+--------------------------------------------------------------------------------------------
+E001       C101      Bank Locker Robbery          Fingerprints   Locker Room B      HC Suresh          In Storage
+E002       C101      Bank Locker Robbery          CCTV DVR       Electronics Rack   FSL Rohtak         Sent for Test
+E003       C102      Missing Person Case          Hair Strand    Locker A-2         WC Neelam          In Storage
+E004       C103      Hit and Run Accident         Paint Sample   Shelf 5            Court Record       Released to Court
+--------------------------------------------------------------------------------------------
+Total evidence items : 4
+
+Press Enter to show the menu again...
+
+==============================================
+ MAIN MENU
+==============================================
+  1. Add New Case
+  2. Add New Evidence
+  3. View All Cases
+  4. View All Evidence
+  5. Search Evidence
+  6. Transfer Custody of Evidence
+  7. View Custody Chain of an Evidence
+  8. Update Evidence (storage / status)
+  9. Case Wise Report (can save in text file)
+ 10. Delete a Record
+  0. Exit
+==============================================
+Enter your choice (0 to exit) : 5
+
+----- SEARCH EVIDENCE -----
+ 1. Search by Evidence ID
+ 2. Search by Case ID
+ 3. Search by Type (part name is also ok)
+ 4. Search by Status
+Enter your choice : 3
+Enter type (example - hair) : hair
+
+Total records found : 1
+---------------------------------------------
+ Evidence ID : E003
+ Case ID     : C102
+ Type        : Hair Strand
+ Details     : Hair found near the last seen spot
+ Found on    : 2026-08-03
+ Collected by: WC Neelam
+ Storage     : Locker A-2
+ Holder      : WC Neelam
+ Status      : In Storage
+
+Press Enter to show the menu again...
+
+==============================================
+ MAIN MENU
+==============================================
+  1. Add New Case
+  2. Add New Evidence
+  3. View All Cases
+  4. View All Evidence
+  5. Search Evidence
+  6. Transfer Custody of Evidence
+  7. View Custody Chain of an Evidence
+  8. Update Evidence (storage / status)
+  9. Case Wise Report (can save in text file)
+ 10. Delete a Record
+  0. Exit
+==============================================
+Enter your choice (0 to exit) : 6
+
+----- TRANSFER CUSTODY OF EVIDENCE -----
+Enter Evidence ID : E003
+Current holder of this evidence : WC Neelam
+Transferred by [WC Neelam] (press Enter for same) : 
+Transferred to (officer / lab name) : FSL Rohtak
+Transfer date (yyyy-mm-dd) : 2026-08-26
+Reason (lab test / court hearing etc) : DNA profiling test
+Custody transferred from WC Neelam to FSL Rohtak .
+
+Press Enter to show the menu again...
+
+==============================================
+ MAIN MENU
+==============================================
+  1. Add New Case
+  2. Add New Evidence
+  3. View All Cases
+  4. View All Evidence
+  5. Search Evidence
+  6. Transfer Custody of Evidence
+  7. View Custody Chain of an Evidence
+  8. Update Evidence (storage / status)
+  9. Case Wise Report (can save in text file)
+ 10. Delete a Record
+  0. Exit
+==============================================
+Enter your choice (0 to exit) : 7
+
+----- CUSTODY CHAIN OF AN EVIDENCE -----
+Enter Evidence ID : E003
+Custody history of evidence E003 -> 2 record(s)
+----------------------------------------------------------------------------------------
+SR   FROM                TO                  DATE        PURPOSE
+----------------------------------------------------------------------------------------
+4     Crime Scene          WC Neelam            2026-08-03  First collection from crime 
+7     WC Neelam            FSL Rohtak           2026-08-26  DNA profiling test
+----------------------------------------------------------------------------------------
+
+Press Enter to show the menu again...
+
+==============================================
+ MAIN MENU
+==============================================
+  1. Add New Case
+  2. Add New Evidence
+  3. View All Cases
+  4. View All Evidence
+  5. Search Evidence
+  6. Transfer Custody of Evidence
+  7. View Custody Chain of an Evidence
+  8. Update Evidence (storage / status)
+  9. Case Wise Report (can save in text file)
+ 10. Delete a Record
+  0. Exit
+==============================================
+Enter your choice (0 to exit) : 8
+
+----- UPDATE EVIDENCE DETAILS -----
+Enter Evidence ID : E001
+ 1. Change storage place
+ 2. Change status (In Storage / Released to Court / Destroyed)
+What do you want to update : 1
+New storage place : Main Locker M-1
+Record of E001 updated.
+
+Press Enter to show the menu again...
+
+==============================================
+ MAIN MENU
+==============================================
+  1. Add New Case
+  2. Add New Evidence
+  3. View All Cases
+  4. View All Evidence
+  5. Search Evidence
+  6. Transfer Custody of Evidence
+  7. View Custody Chain of an Evidence
+  8. Update Evidence (storage / status)
+  9. Case Wise Report (can save in text file)
+ 10. Delete a Record
+  0. Exit
+==============================================
+Enter your choice (0 to exit) : 9
+
+----- CASE WISE EVIDENCE REPORT -----
+Total number of cases    : 3
+Total evidence items     : 4
+
+CASE ID   TITLE                              EVIDENCE COUNT
+------------------------------------------------------------
+C101       Bank Locker Robbery                2
+C102       Missing Person Case                1
+C103       Hit and Run Accident               1
+------------------------------------------------------------
+
+Do you want to save this report in a text file? (y/n) : y
+Report saved in file -> evidence_report.txt
+
+Press Enter to show the menu again...
+
+==============================================
+ MAIN MENU
+==============================================
+  1. Add New Case
+  2. Add New Evidence
+  3. View All Cases
+  4. View All Evidence
+  5. Search Evidence
+  6. Transfer Custody of Evidence
+  7. View Custody Chain of an Evidence
+  8. Update Evidence (storage / status)
+  9. Case Wise Report (can save in text file)
+ 10. Delete a Record
+  0. Exit
+==============================================
+Enter your choice (0 to exit) : 0
+
+Thank you. All data is safely stored in MySQL.

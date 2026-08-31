@@ -1,0 +1,12 @@
+FORENSIC EVIDENCE AND CUSTODY VAULT - REPORT
+Generated on : 2026-08-30 16:15:17.838943
+============================================================
+Total cases : 3
+Total evidence items : 3
+============================================================
+CASE ID   TITLE                              EVIDENCE COUNT
+------------------------------------------------------------
+0001      Fizzel Bomber                     1
+0002      Missing child Jennie              1
+0003      The woods killer                  1
+------------------------------------------------------------
